@@ -3,7 +3,7 @@ const getElements = (selector) => document.querySelector(selector);
 // Render tab item
 const renderTab = (data) => {
   let content = "";
-  
+
   data.map((item) => {
     content += `
     <li class="nav-item" role="presentation">
@@ -26,7 +26,6 @@ const renderList = (data) => {
   let content = "";
   data.map((item) => {
     content += `
-    <div class="tab-pane fade show active" id="${item.type}" role="tabpanel" aria-labelledby="pills-${item.type}-tab">
       <div class="card">
         <img src="${item.imgSrc_jpg}" class="img-fluid" alt="${item.name}"/>
         <div class="card-body">
@@ -34,7 +33,6 @@ const renderList = (data) => {
           <button class="btn btn-primary" onclick="testCloth('${item.id}')">Thử đồ</button>
         </div>
       </div>
-    </div>
     `;
   });
 
