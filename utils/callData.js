@@ -1,5 +1,3 @@
-let data = [];
-
 // fetch api
 fetch("../data/data.json")
   .then((response) => response.json())
@@ -7,7 +5,7 @@ fetch("../data/data.json")
     data = json.tabPanes;
     renderTab(json.navPills);
     filterByType("topclothes");
-    console.log(data);
+    // console.log(data);
   })
   .catch((error) => {
     console.log(error);
